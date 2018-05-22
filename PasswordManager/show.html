@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="./lib//bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<style>
+		body,html{
+			width: 100%;
+			height: 100%;
+			
+		}
+		body{
+			background-image:url('./assets/img/bg.png')
+		}
+		.content{
+			 width:60%;
+			 margin: 0 auto;
+			 background: white;
+			 min-width: 640px;
+			 position: relative;
+		}
+		.tips{
+			 text-align: center;
+			 line-height: 100px;
+			 font-size:20px;
+			 font-weight: 700;
+		}
+		.tips span{
+			font-size:50px;
+			color: #c00;
+			font-style: italic;
+			font-size: 3rem;
+			font-weight: 700;
+		}
+	  .items-show{
+			padding-bottom: 10px;
+		}
+		/* 表格样式 */
+		 table.table2_1{
+			width:90%;
+			margin:15px auto;
+			
+		}
+		.table2_1 th {
+			background-color:orange;
+			color:#FFFFFF;
+			height: 40px;
+			line-height: 40px;
+			font-size: 1.5rem !important;
+			font-style: italic;
+			font-weight: 700;
+		}
+		.table2_1,.table2_1 th,.table2_1 td
+		{
+			font-size:0.95em;
+			text-align:center;
+			padding:4px;
+			border:1px solid #c3cbfe;
+			border-collapse:collapse;
+			height: 50px;
+			line-height: 50px;
+		}
+		.table2_1 tr:nth-child(odd){
+			background-color:#dce1fe;
+		}
+		.table2_1 tr:nth-child(even){
+			background-color:#fdfdfd;
+		}
+		.shows{
+			 display: none;
+		}
+		/* 添加一条记录 */
+		.g-tips{
+				position: fixed;
+				top:0;
+				left:0;
+				bottom: 0;
+				right: 0;
+				background-color: rgba(0, 0, 0, .5);
+				display: none;
+				z-index: 10;
+		}
+		.g-content{
+			width: 500px;
+			height: 350px;
+			background-color: white;
+			border-radius: 5px;
+			-moz-box-shadow:0px 0px 20px #F2F2F2; 
+			-webkit-box-shadow:0px 0px 20px #F2F2F2;
+			box-shadow:0px 0px 20px #F2F2F2;
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin-left: -250px;
+			margin-top: -120px;
+		}
+		.g-oks{
+				  padding: 0px 20px;
+					height: 50px;
+					line-height: 50px;
+					background-color: green;
+					color:white;
+					position: absolute;
+					top:50%;
+					left: 50%;
+					margin-top:50px;
+					margin-left: -100px;
+					border-radius: 5px;
+					display: none;
+					z-index: 10;
+		}
+		.site{
+			text-align: center;
+			padding:50px 0px;
+		}
+		.logo{
+			text-align: center;
+			padding-bottom:30px;
+		}
+		.logo img{
+			width: 100px;
+			-webkit-animation:change 2s linear infinite;
+		}
+		@keyframes change
+		{
+			from {-webkit-transform:rotate(0deg);}
+			 to {-webkit-transform:rotate(360deg);}
+		}
+		@-moz-keyframes change /* Firefox */
+		{
+			from {-webkit-transform:rotate(0deg);}
+			 to {-webkit-transform:rotate(360deg);}
+		}
+
+		@-webkit-keyframes change /* Safari 和 Chrome */
+		{
+			from {-webkit-transform:rotate(0deg);}
+			 to {-webkit-transform:rotate(360deg);}
+		}
+
+		@-o-keyframes change /* Opera */
+		{
+			from {-webkit-transform:rotate(0deg);}
+			 to {-webkit-transform:rotate(360deg);}
+		}
+		/* 加载动画 */
+		.wait{
+			 position: fixed;
+			 top:0;
+			 left:0;
+			 right: 0;
+			 bottom: 0;
+			 background-color: rgba(0, 0, 0, .8);
+			 display: none;
+		}
+.spinner {
+  margin: 300px auto 0;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+}
+ 
+.spinner > div {
+  background-color: #67CF22;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+
+}
+.wait-tips{
+		/* position: absolute; */
+		margin: 5px auto;
+		color:greenyellow;
+		text-align: center;
+}
+	</style>
+</head>
+<body>
+		<div class="content">	
+			
+				<div class="tips"><span>Your Password Housekeeper</span></div>
+				<div class="logo">
+						<img src="./assets/img/aa.png" alt="">
+				 </div>
+				<div style="text-align: right; margin-right: 50px;"> 
+						<button type="button" class="btn btn-success addItem" style="background-color: #c00;border:blueviolet;">添加一条(ADD) </button>
+				</div>
+				<!-- 表格展示 记录 -->
+				<div class="items-show">
+						<div class="shows" style="text-align: center;line-height: 50px;font-size:25px;color:red;">No Anything, Go to Add a Item!</div>
+						<table class="table2_1">
+							  <thead>
+										<tr>
+											<th>Alias</th><th>Website</th><th>Account</th><th>Password</th><th>Option</th>
+										</tr>
+									
+								</thead>
+								<tbody class="changeContent">
+							  </tbody>
+						</table>
+
+				</div>
+				<!--  添加一条记录 -->
+				<div class="g-tips">
+						<div class="g-content">
+							  <form action="">
+								<div style="line-height: 60px;text-align: center;font-size:25px;font-weight: 500;"> Add One Item</div>
+								<div class="input-group" style="box-sizing: border-box;padding:10px 30px;">
+										<span class="input-group-addon">Your Website Alias</span>
+										<input type="text" class="form-control v1" placeholder="Alias" aria-describedby="basic-addon1">
+								</div>
+								<div class="input-group" style="box-sizing: border-box;padding:10px 30px;">
+										<span class="input-group-addon">Your  &nbsp;&nbsp;&nbsp; Website</span>
+										<input type="text" class="form-control v2" placeholder="Website" aria-describedby="basic-addon1">
+								</div>
+								<div class="input-group" style="box-sizing: border-box;padding:10px 30px;">
+										<span class="input-group-addon">Your   AccountName</span>
+										<input type="text" class="form-control v3" placeholder="AccountName" aria-describedby="basic-addon1">
+								</div>
+								<div class="input-group" style="box-sizing: border-box;padding:10px 30px;">
+										<span class="input-group-addon">Your   &nbsp;&nbsp;&nbsp;Password</span>
+										<input type="text" class="form-control v4" placeholder="Password" aria-describedby="basic-addon1">
+								</div>
+								<div style="text-align: center;padding-top:20px;">
+										<button type="reset" class="btn btn-danger quxiao" style="width:100px;margin-right: 30px;">取消</button>
+										<button type="button" class="btn btn-success tijiao" style="width:100px;background-color: green;border: 0px;">提交</button>
+								</div>
+							</form>
+						</div>
+				</div>
+				<div class="g-oks">
+						注册成功
+				 </div>
+				 <div class="site">
+					 <div style="color:#c00;font-weight: 600;">您的区块链密码库管家</div>
+					 <div>
+						<img src="data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIxNCAzMCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+LmNscy0xe2ZpbGwtcnVsZTpldmVub2RkO308L3N0eWxlPgogIDwvZGVmcz4KICA8dGl0bGU+bmViPC90aXRsZT4KICA8cGF0aCBjbGFzcz0iY2xzLTEiCiAgICAgICAgZD0iTTEwOC45MiwyLjVsLTIuNDEsNy4zMmgwbC05LjIsNC42OCw3LjEsMi40OCw0LjU1LDkuNSwyLjQxLTcuMzJoMGw5LjItNC42OEwxMTMuNDYsMTJabS00LjU0LDEzLjYzLTUtMS43Ni4xMS0uMDYsNi42OS0zLjQtMS43Miw1LjIzWm00LjY4LTExLjUxLDMuNiw3LjUzLTcuMywzLjcxWm0tLjI1LDE5Ljc1LTMuMzUtNyw1LjA3LDEuNzZabTkuNTktOS42OUwxMTEsMTguNDVsLTUuMy0xLjg1LjExLS4wNiw3LjM5LTMuNzYsNS4zLDEuODVaIi8+CiAgPHBhdGggY2xhc3M9ImNscy0xIgogICAgICAgIGQ9Ik0xNTUuNDEsMTQuNTZhMiwyLDAsMCwwLC40My0xLjIzVjEyLjE0YTIuMSwyLjEsMCwwLDAtMS40NS0ybDAsMGE0LjkxLDQuOTEsMCwwLDAtMS41NS0uMjVoLTQuOTF2OS43M2g1LjY0YTQuODIsNC44MiwwLDAsMCwxLjU0LS4yNWwuMDYsMGEyLjEsMi4xLDAsMCwwLDEuNDUtMnYtLjg3QTIuMzQsMi4zNCwwLDAsMCwxNTUuNDEsMTQuNTZabS02LjY4LTMuODRoNC4wN2E0LjA3LDQuMDcsMCwwLDEsMS4yOS4yMWwwLDBhMS4yNywxLjI3LDAsMCwxLC44NywxLjJ2MS4xOWExLjEyLDEuMTIsMCwwLDEtLjYxLDFoLTUuNjZabTUuNzIsNC4zOGExLjUxLDEuNTEsMCwwLDEsMS4yOSwxLjQxdi44NGExLjI2LDEuMjYsMCwwLDEtLjg3LDEuMmwtLjA1LDBhNCw0LDAsMCwxLTEuMjkuMjFoLTQuOFYxNS4wOVoiLz4KICA8cG9seWdvbiBjbGFzcz0iY2xzLTEiCiAgICAgICAgICAgcG9pbnRzPSIxMzYuMDcgMTkuNiAxMzYuMDcgMTAuMDUgMTQzLjg4IDEwLjA1IDE0My44OCAxMC44NSAxMzYuODUgMTAuODUgMTM2Ljg1IDE0LjQzIDE0My4xMSAxNC40MyAxNDMuMTEgMTUuMjIgMTM2Ljg1IDE1LjIyIDEzNi44NSAxOC44IDE0NC42NCAxOC44IDE0NC42NCAxOS42IDEzNi4wNyAxOS42Ii8+CiAgPHBvbHlnb24gY2xhc3M9ImNscy0xIgogICAgICAgICAgIHBvaW50cz0iMTI0LjkxIDExLjQ5IDEyNC45MSAxOS40MiAxMjQuMTMgMTkuNDIgMTI0LjEzIDkuNDggMTMxLjk3IDE3Ljk5IDEzMS45NyAxMC4wNyAxMzIuNzYgMTAuMDcgMTMyLjc2IDIwIDEyNC45MSAxMS40OSIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIKICAgICAgICBkPSJNMTYzLjY3LDE5LjYyYTQsNCwwLDAsMS0zLjk1LTMuODNWOS44N2guODN2NS45MWEzLjEyLDMuMTIsMCwwLDAsMy4xMiwzaC41OWEzLjEyLDMuMTIsMCwwLDAsMy4xMi0zVjkuODdoLjgzdjUuOTFhNCw0LDAsMCwxLTMuOTQsMy44NFoiLz4KICA8cG9seWdvbiBjbGFzcz0iY2xzLTEiCiAgICAgICAgICAgcG9pbnRzPSIxNzEuODIgMTkuNDIgMTcxLjgyIDEwLjA3IDE3Mi42MSAxMC4wNyAxNzIuNjEgMTguNjQgMTc5LjY5IDE4LjY0IDE3OS42OSAxOS40MiAxNzEuODIgMTkuNDIiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiCiAgICAgICAgZD0iTTE5MC4yOCwxOS41M2wtMS4xOC0yLjM1aC01LjU3bC0xLjE4LDIuMzVoLS45bDQuODctOS42Nyw0Ljg2LDkuNjdabS0xLjU4LTMuMTUtMi4zOC00Ljc0LTIuMzgsNC43NFoiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiCiAgICAgICAgZD0iTTE5My42NCwxOS40MXYtLjgyaDUuNDZhMy44OSwzLjg5LDAsMCwwLDEuMjItLjIsMS40MywxLjQzLDAsMCwwLC44NC0xLjI2VjE2LjZhMS40MiwxLjQyLDAsMCwwLS44Mi0xLjI0LDQsNCwwLDAsMC0xLjI1LS4yaC0zYTQuNzMsNC43MywwLDAsMS0xLjUyLS4yNUEyLDIsMCwwLDEsMTkzLjI0LDEzVjEyLjJhMiwyLDAsMCwxLDEuMzgtMS44OCw0LjY4LDQuNjgsMCwwLDEsMS41MS0uMjVoNC44MnYuODJoLTQuODJhMy45LDMuOSwwLDAsMC0xLjI1LjIxLDEuMTUsMS4xNSwwLDAsMC0uODEsMS4xVjEzYTEuMTUsMS4xNSwwLDAsMCwuODEsMS4xLDQsNCwwLDAsMCwxLjI2LjIxaDNhNC43Miw0LjcyLDAsMCwxLDEuNDguMjRsLjA5LDBhMi4yNCwyLjI0LDAsMCwxLDEuMzIsMnYuNTVhMi4yNSwyLjI1LDAsMCwxLTEuMzEsMmwtLjA4LDBhNC43NCw0Ljc0LDAsMCwxLTEuNDkuMjRaIi8+CiAgPHBhdGgKICAgIGQ9Ik0xNC44MSwxMy4yMmEyLjYxLDIuNjEsMCwwLDAsLjU1LTEuNzEsMi43OCwyLjc4LDAsMCwwLS4yNS0xLjE4LDIuNDEsMi40MSwwLDAsMC0uNjktLjg4LDIuNjcsMi42NywwLDAsMC0xLS41LDExLjYyLDExLjYyLDAsMCwwLTIuMzMtLjE0SDkuMTh2MTAuM0gxMFYxNC4yNGguOGExMy43MiwxMy43MiwwLDAsMCwyLjYxLS4xOEEyLjM5LDIuMzksMCwwLDAsMTQuODEsMTMuMjJabS0uODgtLjM2YTIuNjMsMi42MywwLDAsMS0yLC41NUgxMFY5LjY2aDEuODhjMS43LDAsMi41Ni42MiwyLjU2LDEuODVBMS45MiwxLjkyLDAsMCwxLDEzLjkzLDEyLjg2WiIvPgogIDxwYXRoCiAgICBkPSJNMjMuNTgsMTIuNTJhMy43LDMuNywwLDAsMC01LjQyLDBBNCw0LDAsMCwwLDE3LDE1LjM3YTQsNCwwLDAsMCwxLjExLDIuODIsMy43NCwzLjc0LDAsMCwwLDUuNDUsMCw0LjE5LDQuMTksMCwwLDAsMC01LjY4Wk0yMywxNy42NWEyLjg1LDIuODUsMCwwLDEtMi4xNS45NCwyLjc5LDIuNzksMCwwLDEtMi4xMy0uOTMsMy4yMywzLjIzLDAsMCwxLS44Ni0yLjI2LDMuMywzLjMsMCwwLDEsLjg5LTIuMywyLjgxLDIuODEsMCwwLDEsNC4yNCwwLDMuMjYsMy4yNiwwLDAsMSwuODksMi4yOEEzLjIxLDMuMjEsMCwwLDEsMjMsMTcuNjVaIi8+CiAgPHBvbHlnb24KICAgIHBvaW50cz0iMzYuMjMgMTEuNTQgMzMuODQgMTcuNTUgMzEuMzggMTEuNTQgMzEuMzIgMTEuNTQgMjguODUgMTcuNTUgMjYuNSAxMS41NCAyNS42OCAxMS41NCAyOC44MiAxOS4zNyAyOC44OSAxOS4zNyAzMS4zNSAxMy40MyAzMy44IDE5LjM3IDMzLjg3IDE5LjM3IDM3LjA3IDExLjU0IDM2LjIzIDExLjU0Ii8+CiAgPHBhdGgKICAgIGQ9Ik00NC42OCwxNi44YTMuMTIsMy4xMiwwLDAsMS0yLjg5LDEuODIsMi43MiwyLjcyLDAsMCwxLTItLjg4LDMuMzgsMy4zOCwwLDAsMS0uODgtMi4zMXYtLjA5aDYuNzZhNC4yLDQuMiwwLDAsMC0xLjEzLTIuOTEsMy42NCwzLjY0LDAsMCwwLTIuNjktMS4xLDMuNTEsMy41MSwwLDAsMC0yLjY4LDEuMTgsNC4yNiw0LjI2LDAsMCwwLDAsNS42OCwzLjU3LDMuNTcsMCwwLDAsMi43NCwxLjE4LDMuNzgsMy43OCwwLDAsMCwzLjQ4LTIuMjFaTTM5LDE0LjU1YTIuODMsMi44MywwLDAsMSwyLjg1LTIuNDIsMywzLDAsMCwxLDEuODcuNjQsMi44MywyLjgzLDAsMCwxLDEsMS43OWwwLC4xaC01LjhaIi8+CiAgPHBhdGgKICAgIGQ9Ik01OC4xMywxNi44YTMuMTIsMy4xMiwwLDAsMS0yLjg5LDEuODIsMi43MiwyLjcyLDAsMCwxLTItLjg4LDMuMzgsMy4zOCwwLDAsMS0uODgtMi4zMXYtLjA5aDYuNzZBNC4yLDQuMiwwLDAsMCw1OCwxMi40M2EzLjY0LDMuNjQsMCwwLDAtMi42OS0xLjEsMy41MSwzLjUxLDAsMCwwLTIuNjgsMS4xOCw0LjI2LDQuMjYsMCwwLDAsMCw1LjY4LDMuNTcsMy41NywwLDAsMCwyLjc0LDEuMTgsMy43OCwzLjc4LDAsMCwwLDMuNDgtMi4yMVptLTUuNy0yLjI1YTIuODMsMi44MywwLDAsMSwyLjg1LTIuNDIsMywzLDAsMCwxLDEuODcuNjQsMi44MywyLjgzLDAsMCwxLDEsMS43OWwwLC4xSDUyLjRaIi8+CiAgPHBhdGgKICAgIGQ9Ik02MS44MywxOC4xOGEzLjYxLDMuNjEsMCwwLDAsMi43MywxLjE4LDMuNjgsMy42OCwwLDAsMCwyLjg4LTEuNTZsLjE1LS4xOHYxLjQ4aC43OFY4LjU1aC0uNzh2NC41OGwtLjE1LS4yMWEzLjQ0LDMuNDQsMCwwLDAtMi45Mi0xLjU4LDMuNTksMy41OSwwLDAsMC0yLjY4LDEuMTgsNCw0LDAsMCwwLTEuMTIsMi44M0E0LDQsMCwwLDAsNjEuODMsMTguMThabS41OC01LjFhMywzLDAsMCwxLDQuMzcsMCwzLjI5LDMuMjksMCwwLDEsLjg3LDIuMywzLjE2LDMuMTYsMCwwLDEtLjkzLDIuMzMsMywzLDAsMCwxLTIuMTYuOTIsMi44MiwyLjgyLDAsMCwxLTIuMTMtMSwzLjM3LDMuMzcsMCwwLDEsMC00LjU2WiIvPgogIDxwYXRoCiAgICBkPSJNODAuODksMTIuNTFhMy41NCwzLjU0LDAsMCwwLTIuNjgtMS4xOCwzLjY3LDMuNjcsMCwwLDAtMi45NSwxLjVsLS4xNS4xOFY4LjU1aC0uNzhWMTkuMTFoLjc4VjE3LjVsLjE1LjIxYTMuNSwzLjUsMCwwLDAsMi45MiwxLjY2LDMuNTgsMy41OCwwLDAsMCwyLjY4LTEuMTgsNC4xOCw0LjE4LDAsMCwwLDAtNS42OFptLS42LDUuMWEyLjkyLDIuOTIsMCwwLDEtNC4zNCwwLDMuMzUsMy4zNSwwLDAsMS0uODktMi4zNUEzLjE5LDMuMTksMCwwLDEsNzUuOTQsMTNhMi45MiwyLjkyLDAsMCwxLDIuMTktLjkxLDIuODIsMi44MiwwLDAsMSwyLjE4LDEsMy4zMywzLjMzLDAsMCwxLC44NywyLjI4QTMuMjgsMy4yOCwwLDAsMSw4MC4yOSwxNy42WiIvPgogIDxwb2x5Z29uCiAgICBwb2ludHM9Ijg5LjE5IDExLjU0IDg2LjYzIDE3LjYzIDgzLjk5IDExLjU0IDgzLjE1IDExLjU0IDg2LjIgMTguNjEgODQuNzkgMjEuOTMgODUuNjMgMjEuOTMgOTAuMDQgMTEuNTQgODkuMTkgMTEuNTQiLz4KICA8cmVjdCB4PSI0Ny4zOCIgeT0iMTEuNDkiIHdpZHRoPSIwLjgzIiBoZWlnaHQ9IjcuNzIiLz4KICA8cGF0aAogICAgZD0iTTQ3LjM5LDE0LjA2aC44NGExLjg5LDEuODksMCwwLDEsMS44NS0xLjcyLDEuOCwxLjgsMCwwLDEsLjYyLjEydi0uOWEyLjYzLDIuNjMsMCwwLDAtLjYyLS4wOEEyLjc0LDIuNzQsMCwwLDAsNDcuMzksMTQuMDZaIi8+Cjwvc3ZnPgo=" width="200px"></div>
+				 </div>
+		</div>
+		<div class="wait">
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+			<div class="wait-tips">
+				交易中...请等待
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/2.1.1-beta1/jquery.js"></script>
+		<script src=lib/nebPay.js></script>
+		<script src="lib/nebulas.js"></script>
+	<script>
+		 var NebPay = require("nebpay")
+		 var nebPay = new NebPay();
+		 var dappAddress = "n21BDvzsg57QCZ9vEvpSypPjkwukGx7mhTU"
+		 var Uaddress = sessionStorage.getItem("address")
+		 var Upassword = sessionStorage.getItem("password")
+
+		  var HttpRequest = require("nebulas").HttpRequest;
+			var Neb = require("nebulas").Neb;
+			var Account = require("nebulas").Account;
+			var Transaction = require("nebulas").Transaction;
+			var Unit = require("nebulas").Unit;
+			var neb = new Neb();
+			// neb.setRequest(new HttpRequest("https://testnet.nebulas.io"));
+			neb.setRequest(new HttpRequest("https://mainnet.nebulas.io"));
+			var account, tx, txhash, timer;
+
+		 if(!(Uaddress && Upassword)){
+		  	window.location.href = "./index.html"
+			//  alert("请登录...")
+		 }
+		 
+		 
+		 // 发送请求 看本账户有多少个记录并显示
+		  var callArgs = "[\"" + Uaddress +"\"]"; 
+	  	nebPay.simulateCall(dappAddress,"0","getAllAtPd",callArgs,{
+				listener:getAllItems
+		  })
+			function getAllItems(res) {
+				console.log(res)
+				res = res.result
+				if(res!=="\"null\""){
+					 $(".shows").css("display","none")
+					//  $(".table2_1").css("display","block")
+					 var result = JSON.parse(res)
+					 result = JSON.parse(result)
+					 console.log(result)
+					 // 拿到了items 数组循环出字符串添加到结构
+					 var str = changeContent(result)
+					 $(".changeContent").html(str);
+					 if(result.length===0){
+						  tips("您没有保存任何网站和密码，去添加一条","#c00",2000);
+					 }
+					 del()
+				}else{
+				
+					$(".shows").css("display","block")
+					
+				}
+			}
+			// 添加一条记录
+			$(".addItem").click(function () {
+				if(testWallte()){
+					return
+				}
+				console.log(111)
+				 $(".g-tips").fadeIn(500)
+			})
+			$(".quxiao").click(function(){
+				$(".g-tips").fadeOut(500)
+			})
+			$(".tijiao").click(function(){
+				 // 获取值
+				 var alias = $(".v1")
+				 var website = $(".v2")
+				 var account = $(".v3")
+				 var password = $(".v4")
+				 // 
+				 aliasV  = alias.val().trim()
+				 websiteV = website.val().trim()
+				 accountV = account.val().trim()
+				 passwordV = password.val().trim()
+				 var callArgs = "[\"" + aliasV + "\",\"" + websiteV +"\",\"" + accountV + "\",\"" + passwordV + "\",\"" + Uaddress +  "\"]";
+				 if(aliasV&&websiteV&&accountV&&passwordV){
+						alias.val("")
+						website.val("")
+						account.val("")
+						password.val("")
+						$(".g-tips").fadeOut(500)
+						var serialNumber = nebPay.call(dappAddress,"0","addAtPd",callArgs,{
+							listener:addItem
+						})
+				 }else{
+					tips("添加失败，请填写完成","#c00")
+				 }
+			})
+			// 删除一条记录
+			del()
+			function del(){
+				if(testWallte()){
+					return
+				}
+				var delBtn = $(".delItem")
+				if(delBtn.length>0){
+					delBtn.click(function(){
+						var node = this.parentNode.parentNode
+						var value = node.children[1].children[0].innerHTML;
+						var callArgs = "[\"" + value + "\",\"" + Uaddress+"\"]"; 
+						nebPay.call(dappAddress,"0","delAtPd",callArgs,{
+							listener:delItem
+						})
+					})
+				}
+			}
+			// ---------------------监听函数----------------------------------------------------
+	    function  addItem(res){
+					console.log(res);
+					var txhash = res.txhash;
+					console.log(txhash)
+					if(txhash){
+						testTransitionStatus(txhash,function(){
+							$(".wait").fadeOut(10)
+							tips("添加成功","green",500)
+							setTimeout(function(){
+								window.location.reload(true);
+							},800)
+							
+						})
+					}
+			}
+			function delItem(res) { 
+				console.log(res);
+				var txhash = res.txhash;
+				console.log(txhash)
+				if(txhash){
+					testTransitionStatus(txhash,function(){
+							$(".wait").fadeOut(10)
+							tips("删除成功","green",500)
+							setTimeout(function(){
+								window.location.reload(true);
+							},800)
+							
+					})
+				}
+				
+			}
+	// ----------------------工具函数-----------------------------------------------------
+			function testTransitionStatus(txhash,callback){
+				timer = setInterval(function(){
+					  $(".wait").fadeIn(500)
+						neb.api.getTransactionReceipt({hash:txhash}).then(function (res) { 
+								// console.log("================================")
+								// console.log(res)
+								// console.log("================================")
+								if(res.status === 1){
+									clearInterval(timer)
+									if(callback){
+										callback()
+									}
+									return 
+								}
+						})
+				},2000)
+			}
+			function tips(text,background,time){
+						  var html = $(".g-oks");
+							html.html(text)
+							background = background || "green"
+							time = time || 1000
+							html.css("backgroundColor",background)
+							$(".g-oks").fadeIn(500);
+							setTimeout(function(){
+								$(".g-oks").fadeOut(1000)
+							},time)
+					 }
+			function changeContent(result){
+				var str = "";
+					// `{websiteName: "百度", website: "www.baidu.com", accountName: "GaoChao", password: "aaa"}`;
+					 for(var i =0;i<result.length;i++){
+						 str+=`	<tr>
+										<td>${result[i].websiteName}</td><td><a target="_blank" style="text-decoration: underline;font-style: italic;" href="${result[i].website}" class="a">${result[i].website}</a></td><td>${result[i].accountName}</td><td>${result[i].password}</td>
+										<td>
+												<button type="button" class="btn btn-danger delItem">Delete</button>
+										</td>
+									</tr>`
+					 }
+				return str;
+			}
+			function testWallte(){
+				 if(typeof webExtensionWallet === undefined ||typeof webExtensionWallet === null){
+					 alert("先安装 Chrome Nebulas-WebExtensionWallet 钱包插件")
+					 return true
+				 }
+				 return false;
+			}
+	</script>
+</body>
+</html>
