@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Flat Registration Form Template</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assetsfile/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assetsfile/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assetsfile/css/form-elements.css">
+    <link rel="stylesheet" href="assetsfile/css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assetsfile/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assetsfile/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assetsfile/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assetsfile/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assetsfile/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+<!-- Top menu -->
+<!--<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">-->
+<!--<div class="container">-->
+<!--<div class="navbar-header">-->
+<!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">-->
+<!--<span class="sr-only">Toggle navigation</span>-->
+<!--<span class="icon-bar"></span>-->
+<!--<span class="icon-bar"></span>-->
+<!--<span class="icon-bar"></span>-->
+<!--</button>-->
+<!--<a class="navbar-brand" href="indexview.html">Bootstrap Flat Registration Form Template</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+<!--<div class="collapse navbar-collapse" id="top-navbar-1">-->
+<!--<ul class="nav navbar-nav navbar-right">-->
+<!--<li>-->
+<!--<span class="li-text">-->
+<!--Put some text or-->
+<!--</span> -->
+<!--<a href="#"><strong>links</strong></a> -->
+<!--<span class="li-text">-->
+<!--here, or some icons: -->
+<!--</span> -->
+<!--<span class="li-social">-->
+<!--<a href="#"><i class="fa fa-facebook"></i></a> -->
+<!--<a href="#"><i class="fa fa-twitter"></i></a> -->
+<!--<a href="#"><i class="fa fa-envelope"></i></a> -->
+<!--<a href="#"><i class="fa fa-skype"></i></a>-->
+<!--</span>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</nav>-->
+
+<!-- Top content -->
+<div class="top-content">
+    <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>-->
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-5 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>记录您的币价</h3>
+                            <p>Fill in the form below to get instant access:</p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                        <div class="form-top-divider"></div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-first-name">币种</label>
+                                <input type="text" name="form-first-name" placeholder="币种"
+                                       class="form-first-name form-control input-error" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Last name</label>
+                                <input type="text" name="form-last-name" placeholder="时间"
+                                       class="form-last-name form-control input-error" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-email">Email</label>
+                                <input type="text" name="form-email" placeholder="价格"
+                                       class="form-email form-control input-error" id="form-email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-about-yourself">About yourself</label>
+                                <textarea name="form-about-yourself" placeholder="所在交易市场"
+                                          class="form-about-yourself form-control input-error"
+                                          id="form-about-yourself"></textarea>
+                            </div>
+                            <button type="submit" class="btn" onclick="innerlist()">记录</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-7 text">
+                    <h1><strong>Coin</strong> Flat Registration Form</h1>
+                    <div class="description">
+                        <p>
+                            This is a free responsive flat registration form made with Bootstrap.
+                            Download it on <a href="#"><strong>AZMIND</strong></a>, customize and use it as you like!
+                        </p>
+                    </div>
+                     <div id="list">
+
+                            </div>
+                    <!--<div class="top-big-link">-->
+                    <!--<a class="btn btn-link-1" href="#">Button 1</a>-->
+                    <!--<a class="btn btn-link-2" href="#">Button 2</a>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Javascript -->
+<script src="assetsfile/js/jquery-1.11.1.min.js"></script>
+<script src="assetsfile/bootstrap/js/bootstrap.min.js"></script>
+<script src="assetsfile/js/jquery.backstretch.min.js"></script>
+<script src="assetsfile/js/retina-1.1.0.min.js"></script>
+<script src="assetsfile/js/scripts.js"></script>
+<script src="assetsfile/js/ins.js"></script>
+
+<!--[if lt IE 10]>
+<script src="assets/js/placeholder.js"></script>
+<![endif]-->
+
+
+<div class="backstretch"
+     style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 662px; width: 839px; z-index: -999999; position: fixed;">
+
+    <img src="assets/img/backgrounds/1.jpg"
+         style="position: absolute; margin: 0px; padding: 0px; border: none; width: 882.667px; height: 662px; max-height: none; max-width: none; z-index: -999999; left: -21.8333px; top: 0px;">
+</div>
+
+</body>
+</html>
