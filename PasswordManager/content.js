@@ -40,6 +40,7 @@ TheContent.prototype = {
         coinItem.price = price;
         coinItem.place = place;
         this.data.put(name,coinItem);
+        return coinItem.name;
     },
     get:function(name){
           return this.data.get(name);

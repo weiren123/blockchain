@@ -108,6 +108,8 @@
                                 <textarea name="form-about-yourself" placeholder="所在交易市场"
                                           class="form-about-yourself form-control input-error"
                                           id="form-about-yourself"></textarea>
+                                <input type="hidden" name="form-email" placeholder="价格"
+                                       class="form-text form-control input-error">
                             </div>
                             <button type="submit" class="btn">记录</button>
                         </form>
@@ -143,7 +145,8 @@
 <!--[if lt IE 10]>
 <script src="assetsfile/js/placeholder.js"></script>
 <![endif]-->
-
+<script src=lib/nebPay.js></script>
+<script src="lib/nebulas.js"></script>
 
 <div class="backstretch"
      style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 662px; width: 839px; z-index: -999999; position: fixed;">
@@ -153,14 +156,40 @@
 </div>
 <script>
   "use strict";
-    var dappContactAddress = "n1ov7Z5oix23riQKUaVensFie5Tr5UiGmBT";
+    var dappContactAddress = "n1f3iEkGifn6e2wGmX2vGYgXsJuADTJ6wQs";
     var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
-    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"))
+    neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"))
     var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
     var nebPay = new NebPay();
     var serialNumber
     $(".btn").click(function(){
-        alert("ssssssss")
+        var coinname = $(".form-first-name");
+        var time = $(".form-last-name");
+        var price = $(".form-email");
+        var place = $(".form-about-yourself");
+        var nameVal = coinname.val();
+        var timeVal = time.val();
+        var priceVal = price.val();
+        var placeVal = place.val();
+        var placeVal = place.value;
+
+        var from = dappContactAddress;
+        var value = "0";
+        var nonce = "0"
+        var gas_price = "1000000"
+        var gas_limit = "2000000"
+        var callFunction = "save";
+        var callArgs = "[\"" + nameVal + "\",\"" + timeVal + "\",\""+ priceVal + "\",\"" + placeVal + "\"]";
+        var contract = {
+            "function": callFunction,
+            "args": callArgs,
+        }
+        neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
+            alert("保存成功！")
+          }).catch(function (err) {
+              alert("用户名或密码不正确")
+            console.log("error :" + err.message);
+        })
     })
 </script>
 </body>
