@@ -8,7 +8,7 @@
 
     <meta charset="utf-8">
 
-    <title>Account Mamager</title>
+    <title>区块链币管家</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -168,7 +168,7 @@
 
 <div class="forms">
 
-    <h1>您的区块链账户管家</h1>
+    <h1>您的区块链币管家</h1>
 
     <div>
 
@@ -176,7 +176,7 @@
 
         <input type="password" name="password" class="password address-pwd" placeholder="请输入您的密码">
 
-        <button type="reset" style="background-color: lightgreen;border: none;" class="denglu">登陆</button>
+        <button type="reset" style="background-color: #bb82ee;border: none;" class="denglu">登陆</button>
         <button type="reset" class="zhuce">没有账号？注册>>></button>
         <div class="error"><span>+</span></div>
 
@@ -184,38 +184,38 @@
 
 </div>
 
-<div class="g-tips">
-    <div class="g-content">
-        <div style="color:#c00;line-height:50px;height:50px;font-weight: 600;box-sizing: border-box;padding-top:10px;">
-            请输入6~18位字母或数字作密码,请谨记!!!
-        </div>
-        <!-- <div style="text-algin:center;color:grey;font-size:12px;margin-top:15px;margin-bottom: 20px;"> 若此地址已经注册，则此操作为修改密码</div> -->
-        <div class="">
-            <input type="password" class="form-control" id="pwd" placeholder="Password">
-        </div>
-        <div>
-            <button type="button" class="btn btn-danger quxiao" style="width:100px;margin-right: 30px;">取消</button>
-            <button type="button" class="btn btn-success tijiao"
-                    style="width:100px;background-color: green;border: 0px;">提交
-            </button>
-        </div>
-    </div>
-</div>
-<div class="g-oks">
-    注册成功
-</div>
-<div class="wait">
-    <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-    </div>
-    <div class="wait-tips">
-        交易中...请等待
-    </div>
-</div>
+<!--<div class="g-tips">-->
+<!--<div class="g-content">-->
+<!--<div style="color:#c00;line-height:50px;height:50px;font-weight: 600;box-sizing: border-box;padding-top:10px;">-->
+<!--请输入6~18位字母或数字作密码,请谨记!!!-->
+<!--</div>-->
+<!--&lt;!&ndash; <div style="text-algin:center;color:grey;font-size:12px;margin-top:15px;margin-bottom: 20px;"> 若此地址已经注册，则此操作为修改密码</div> &ndash;&gt;-->
+<!--<div class="">-->
+<!--<input type="password" class="form-control" id="pwd" placeholder="Password">-->
+<!--</div>-->
+<!--<div>-->
+<!--<button type="button" class="btn btn-danger quxiao" style="width:100px;margin-right: 30px;">取消</button>-->
+<!--<button type="button" class="btn btn-success tijiao"-->
+<!--style="width:100px;background-color: green;border: 0px;">提交-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="g-oks">-->
+<!--注册成功-->
+<!--</div>-->
+<!--<div class="wait">-->
+<!--<div class="spinner">-->
+<!--<div class="rect1"></div>-->
+<!--<div class="rect2"></div>-->
+<!--<div class="rect3"></div>-->
+<!--<div class="rect4"></div>-->
+<!--<div class="rect5"></div>-->
+<!--</div>-->
+<!--<div class="wait-tips">-->
+<!--交易中...请等待-->
+<!--</div>-->
+<!--</div>-->
 
 
 <script src="https://cdn.bootcss.com/jquery/2.1.1-beta1/jquery.js"></script>
@@ -228,7 +228,7 @@
 <script src="lib/nebulas.js"></script>
 <script>
     "use strict";
-    var dappContactAddress = "n1xqXAACx6NwRbV8HUPooMFRVdT6tZEWqyv";
+    var dappContactAddress = "n1jZpqYxPZCxkvNgQH4LNMVBwTDzje7UntQ";
     var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
     neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"))
     var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
@@ -241,14 +241,16 @@
         var addressP = $(".address-pwd")
         var addressVal = address.val()
         var addressPVal = addressP.val()
-//        if (!testAddress(addressVal)) {
-//            address.addClass("changeBorder")
-//            return
-//        }
-//        if (!testPassword(addressPVal)) {
-//            addressP.addClass("changeBorder")
-//            return
-//        }
+        if (!testAddress(addressVal)) {
+            address.addClass("changeBorder")
+            alert("地址或密码的格式不正确")
+            return
+        }
+        if (!testPassword(addressPVal)) {
+            addressP.addClass("changeBorder")
+            alert("地址或密码的格式不正确")
+            return
+        }
 //        Uaddress = addressVal
 //        UPassword = addressPVal
         // 地址和密码格式都正确,发送请求
@@ -270,10 +272,10 @@
             console.log(result);
             if (result == "\"1\"") {
                 console.log(result);
-                alert("登陆成功")
-                window.location.href="你所要跳转的页面";
-            }else {
-                 console.log(result);
+//                alert("登陆成功")
+                window.location.href = "indexview.html";
+            } else {
+                console.log(result);
                 alert("用户名或密码不正确")
             }
         }).catch(function (err) {
@@ -281,94 +283,109 @@
         })
     })
     $(".zhuce").click(function () {
-           var address = $(".address")
+        var address = $(".address")
         var addressP = $(".address-pwd")
         var addressVal = address.val()
         var addressPVal = addressP.val()
-          // 地址和密码格式都正确,发送请求
-        var from = dappContactAddress;
-        var value = "0";
-        var nonce = "0"
-        var gas_price = "1000000"
-        var gas_limit = "2000000"
-        var callFunction = "regist";
-        var callArgs = "[\"" + addressVal + "\",\"" + addressPVal + "\"]";
-        console.log(callArgs);
-        var contract = {
-            "function": callFunction,
-            "args": callArgs
-        }
-        neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
-            var result = resp.result;
-             console.log(result);
-             alert("注册成功")
-        }).catch(function (err) {
-            console.log("error :" + err.message);
-        })
-    })
-    // ---------------------------监听函数------------------------
-    function regist(res) {
-        console.log(res);
-        var txhash = res.txhash;
-        console.log(txhash)
-        if (txhash) {
-            testTransitionStatus(txhash, function () {
-                $(".wait").fadeOut(10)
-                tips("注册成功", "green", 1000)
-                setTimeout(function () {
-                    window.location.reload(true);
-                }, 1500)
+        // 地址和密码格式都正确,发送请求
 
+        if (!testAddress(addressVal)) {
+            address.addClass("changeBorder")
+            alert("地址或密码的格式不正确")
+            return
+        }
+        if (!testPassword(addressPVal)) {
+            addressP.addClass("changeBorder")
+            alert("地址或密码的格式不正确")
+            return
+        }
+        if (!testWallte()) {
+
+            var from = dappContactAddress;
+            var value = "0";
+            var nonce = "0"
+            var gas_price = "1000000"
+            var gas_limit = "2000000"
+            var callFunction = "regist";
+            var callArgs = "[\"" + addressVal + "\",\"" + addressPVal + "\"]";
+            console.log(callArgs);
+            var contract = {
+                "function": callFunction,
+                "args": callArgs
+            }
+            neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
+                var result = resp.result;
+                console.log(result);
+                alert("注册成功")
+            }).catch(function (err) {
+                console.log("error :" + err.message);
             })
         }
-    }
-
-    // 登录监听
-    function login(res) {
-        var result = res.result
-        console.log(res)
-        console.log(result)
-        if (result === "\"0\"") {
-            tips("登录成功")
-            // 将地址和密码存入sessionStorage
-            sessionStorage.setItem("password", UPassword);
-            sessionStorage.setItem("address", Uaddress);
-            setTimeout(function () {
-                window.location.href = "./show.html";
-            }, 500)
-        } else if (result === "\"1\"") {
-            tips("密码错误", "red")
-        } else if (result === "\"2\"") {
-            tips("此地址未注册", "orange")
         }
-    }
+    )
+    //    // ---------------------------监听函数------------------------
+    //    function regist(res) {
+    //        console.log(res);
+    //        var txhash = res.txhash;
+    //        console.log(txhash)
+    //        if (txhash) {
+    //            testTransitionStatus(txhash, function () {
+    //                $(".wait").fadeOut(10)
+    //                tips("注册成功", "green", 1000)
+    //                setTimeout(function () {
+    //                    window.location.reload(true);
+    //                }, 1500)
+    //
+    //            })
+    //        }
+    //    }
+    //
+    //    // 登录监听
+    //    function login(res) {
+    //        var result = res.result
+    //        console.log(res)
+    //        console.log(result)
+    //        if (result === "\"0\"") {
+    //            tips("登录成功")
+    //            // 将地址和密码存入sessionStorage
+    //            sessionStorage.setItem("password", UPassword);
+    //            sessionStorage.setItem("address", Uaddress);
+    //            setTimeout(function () {
+    //                window.location.href = "./show.html";
+    //            }, 500)
+    //        } else if (result === "\"1\"") {
+    //            tips("密码错误", "red")
+    //        } else if (result === "\"2\"") {
+    //            tips("此地址未注册", "orange")
+    //        }
+    //    }
     // ---------------------------功能函数-------------------------
-    function testTransitionStatus(txhash, callback) {
-        timer = setInterval(function () {
-            $(".wait").fadeIn(500)
-            neb.api.getTransactionReceipt({hash: txhash}).then(function (res) {
-                if (res.status === 1) {
-                    clearInterval(timer)
-                    if (callback) {
-                        callback()
-                    }
-                    return
-                }
-            })
-        }, 2000)
-    }
+    //    function testTransitionStatus(txhash, callback) {
+    //        timer = setInterval(function () {
+    //            $(".wait").fadeIn(500)
+    //            neb.api.getTransactionReceipt({hash: txhash}).then(function (res) {
+    //                if (res.status === 1) {
+    //                    clearInterval(timer)
+    //                    if (callback) {
+    //                        callback()
+    //                    }
+    //                    return
+    //                }
+    //            })
+    //        }, 2000)
+    //    }
 
-    function tips(text, background, time) {
-        var html = $(".g-oks");
-        html.html(text)
-        background = background || "green"
-        time = time || 1000
-        html.css("backgroundColor", background)
-        $(".g-oks").fadeIn(500);
-        setTimeout(function () {
-            $(".g-oks").fadeOut(1000)
-        }, time)
-    }
+    //    function tips(text, background, time) {
+    //        var html = $(".g-oks");
+    //        html.html(text)
+    //        background = background || "green"
+    //        time = time || 1000
+    //        html.css("backgroundColor", background)
+    //        $(".g-oks").fadeIn(500);
+    //        setTimeout(function () {
+    //            $(".g-oks").fadeOut(1000)
+    //        }, time)
+    //    }
 
     function testPassword(pwd) {
         var pat = /^[a-zA-Z0-9]{6,18}$/;

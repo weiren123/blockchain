@@ -78,7 +78,7 @@
                 <div class="col-sm-5 form-box">
                     <div class="form-top">
                         <div class="form-top-left">
-                            <h3>记录您的币价</h3>
+                            <h3>记录您的币</h3>
                             <p>Fill in the form below to get instant access:</p>
                         </div>
                         <div class="form-top-right">
@@ -109,7 +109,7 @@
                                           class="form-about-yourself form-control input-error"
                                           id="form-about-yourself"></textarea>
                             </div>
-                            <button type="submit" class="btn" onclick="innerlist()">记录</button>
+                            <button type="submit" class="btn">记录</button>
                         </form>
                     </div>
                 </div>
@@ -124,10 +124,6 @@
                      <div id="list">
 
                             </div>
-                    <!--<div class="top-big-link">-->
-                    <!--<a class="btn btn-link-1" href="#">Button 1</a>-->
-                    <!--<a class="btn btn-link-2" href="#">Button 2</a>-->
-                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -145,16 +141,27 @@
 <script src="assetsfile/js/ins.js"></script>
 
 <!--[if lt IE 10]>
-<script src="assets/js/placeholder.js"></script>
+<script src="assetsfile/js/placeholder.js"></script>
 <![endif]-->
 
 
 <div class="backstretch"
      style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 662px; width: 839px; z-index: -999999; position: fixed;">
 
-    <img src="assets/img/backgrounds/1.jpg"
+    <img src="assetsfile/img/backgrounds/1.jpg"
          style="position: absolute; margin: 0px; padding: 0px; border: none; width: 882.667px; height: 662px; max-height: none; max-width: none; z-index: -999999; left: -21.8333px; top: 0px;">
 </div>
-
+<script>
+  "use strict";
+    var dappContactAddress = "n1ov7Z5oix23riQKUaVensFie5Tr5UiGmBT";
+    var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
+    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"))
+    var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
+    var nebPay = new NebPay();
+    var serialNumber
+    $(".btn").click(function(){
+        alert("ssssssss")
+    })
+</script>
 </body>
 </html>

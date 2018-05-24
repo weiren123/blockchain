@@ -12,6 +12,7 @@ LetterItem.prototype = {
         return JSON.stringify(this)
     }
 };
+
 var TheUser = function () {
     LocalContractStorage.defineMapProperty(this, "data", {
         parse: function (text) {
@@ -30,11 +31,18 @@ TheUser.prototype ={
          if(!address || !pwd){
             throw new Error("empty address or pwd")
         }
-    var letterItem = new LetterItem();
-        letterItem.address = address;
-        letterItem.pwd = pwd;
+        var letterItem1 = this.data.get(address);
+         var newsaddress = letterItem1.address;
+         if(newsaddress == address){
+             return 0;
+         }else {
+         var letterItem = new LetterItem();
+         letterItem.address = address;
+         letterItem.pwd = pwd;
 
         this.data.put(address,letterItem);
+        return 1;
+         }
     },
     login:function(address,pwd){
         if(!address){
@@ -42,6 +50,7 @@ TheUser.prototype ={
         }
         var letterItem1 = this.data.get(address);
         var pwd1 = letterItem1.pwd;
+        console.log(pwd1)
         if(pwd1 == pwd){
             return "1";
         }else {
