@@ -1,5 +1,5 @@
 'use strict'
-var LetterItem = function(text){
+var UserItem = function(text){
     if(text){
         var obj = JSON.parse(text);
         this.address = obj.address;
@@ -7,7 +7,7 @@ var LetterItem = function(text){
     }
 };
 
-LetterItem.prototype = {
+UserItem.prototype = {
     toString : function(){
         return JSON.stringify(this)
     }
@@ -16,7 +16,7 @@ LetterItem.prototype = {
 var TheUser = function () {
     LocalContractStorage.defineMapProperty(this, "data", {
         parse: function (text) {
-            return new LetterItem(text);
+            return new UserItem(text);
         },
         stringify: function (o) {
             return o.toString();
@@ -36,11 +36,11 @@ TheUser.prototype ={
          if(newsaddress == address){
              return 0;
          }else {
-         var letterItem = new LetterItem();
-         letterItem.address = address;
-         letterItem.pwd = pwd;
+         var userItem = new UserItem();
+         userItem.address = address;
+         userItem.pwd = pwd;
 
-        this.data.put(address,letterItem);
+        this.data.put(address,userItem);
         return 1;
          }
     },
