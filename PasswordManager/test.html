@@ -87,7 +87,8 @@
     <div class="datahead">业绩数据</div>
     <ul class="datalist">
         <li><a href="receptionGuang?activityId=1277&amp;staff_id=22357967"><div><img src="./img/msg/achievement.png"></div><p>逛店业绩</p><p>0</p></a></li>
-        <li><a href="findstaffzbyy?activityId=1277&amp;staff_id=22357967"><div><img src="./img/msg/achievement2.png"></div><p>直播邀约业绩</p><p>0</p></a></li>
+<!--        <li><a href="findstaffzbyy?activityId=1277&amp;staff_id=22357967"><div><img src="./img/msg/achievement2.png"></div><p>直播邀约业绩</p><p>0</p></a></li>-->
+        <li><div><img onclick="btn()" src="./img/msg/achievement2.png"></div><p>直播邀约业绩</p><p>0</p></a></li>
     </ul>
 
 
@@ -131,6 +132,27 @@
         <p class="weui-tabbar__label">消息</p>
     </a>
     <script type="text/javascript">
+    function btn(){
+		$.ajax({
+                type:"post",//type可以为post也可以为get
+                url:"http://new.mp.di3sky.cn/di3kpi/activity/transmitRecord",
+                data:{
+                "urlRefferId":"22357934",
+                "refferId":"22357934",
+                "lat":"39.992909",
+                "longs":"116.337796",
+                "status":"0",
+                "activityId":"1277",
+                "smsource":"6",
+                },//这行不能省略，如果没有数据向后台提交也要写成data:{}的形式
+                dataType:"json",//这里要注意如果后台返回的数据不是json格式，那么就会进入到error:function(data){}中
+                success:function(data){
+                },
+                error:function(data){
+                    alert("出现了错误！");
+                }
+            });
+	}
 	function dian(){
 		$.alert('暂未开放');
 	}
