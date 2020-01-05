@@ -1,0 +1,140 @@
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.demos-title {
+  text-align: center;
+  font-size: 34px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+
+.demos-sub-title {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.demos-header {
+  padding: 35px 0;
+}
+
+.demos-content-padded {
+  padding: 15px;
+}
+
+.demos-second-title {
+  text-align: center;
+  font-size: 24px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+}
+.bd {
+			    position: relative;
+			    height: 100%;
+			}
+			.page_zone{
+				height:calc(100%);
+				overflow-y: scroll;
+				background:#f5f5f5;
+			}
+			/*战区*/
+			.warzone{
+				background: #fff;
+				padding: 0 0 10px 0;
+				margin-top:5px;
+				font-size: 14px;
+			}
+			.warzone_top{
+				margin: 0 auto;
+			    width: 95%;
+			    border-bottom: 1px solid #e5e5e5;
+			    padding: 10px 0;
+			}
+			.warzone .weui-cell__hd img{
+				width:50px;
+				height: 50px;
+				margin-right:10px;
+				display:block;
+				border-radius: 50%;
+			}
+			.warzone .weui-cell__bd p:nth-child(1){
+				line-height: 30px;
+				color:#333333;
+			}
+			.warzone .weui-cell__bd p:nth-child(2){
+				color:#999999;
+				font-size:12px;
+				line-height: 20px;
+			}
+			.warzone_top .weui-cell__ft:after{
+				height:10px;
+    			width: 10px;
+    			border-color: #999999;
+			}
+			.warzone .weui-flex{
+				padding:10px 0 0 0;
+				text-align: center;
+				color:#666666;
+			}
+			/*排行*/
+			.warpaihang{
+				background: #ffffff;
+				margin-top:5px;
+				font-size: 14px;
+				padding:0 0 10px 0;
+			}
+			.warpaihang .weui-cells__title{
+			    margin: 0 auto;
+			    width: 95%;
+			    border-bottom: 1px solid #e5e5e5;
+			    padding: 10px 0;
+			    color: #333333;
+			}
+			.warpaihang_list{
+				margin: 0 auto;
+			    width: 95%;
+			    padding: 10px 0 0 0;
+			    color:#999999;
+			}
+			.list_war{
+				text-align: right;
+			}
+			.list_war span:nth-child(1){
+				color:#333333;
+			}
+			/*进度条*/
+			.jd_war{
+				width: 100%;
+			    height: 20px;
+			    margin-top: 5px;
+			    background: #e5e5e5;
+			}
+			.jdt_war{
+			    height: 20px;
+			}
+			.one{
+				width: 82%;
+				background: #ff7a7a;
+			}
+			.two{
+				width: 72%;
+				background: #ffc27a;
+			}
+			.three{
+				width: 62%;
+				background: #7abcff;
+			}

@@ -1,0 +1,2161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>浏览业绩</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+<script src="../css/jquery-3.3.1.min.js"></script>
+<script src="../js/fastclick.js"></script>
+<script src="../js/qrcode.js"></script>
+<link rel="stylesheet" href="../css/weui.min.css">
+<link rel="stylesheet" href="../css/jquery-weui.css">
+<link rel="stylesheet" href="../css/main.css?0">
+<link rel="stylesheet" href="../css/demos.css">
+  </head>
+<style>
+			.bd {
+			    position: relative;
+			    height: 100%;
+			}
+			.bd_details {
+			    height: calc(100% - 0px);
+			    overflow-y: scroll;
+			    background: #f5f5f5;
+			}
+			/*2018/08/28*/
+			.delist{
+				font-size: 14px;
+			    background: #fff;
+			    margin-bottom:5px;
+			}
+			.detail_top{
+				padding:10px;
+				border-bottom: 1px solid #f5f5f5;
+				position: relative;
+			}
+			.detail_top:after{
+				content: " ";
+			    display: inline-block;
+			    height:10px;
+			    width:10px;
+			    border-width: 0 2px 2px 0;
+			    border-color: #c8c8cd;
+			    border-style: solid;
+			    -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+			    transform: matrix(.71,.71,-.71,.71,0,0);
+			    position: relative;
+			    top: -2px;
+			    position: absolute;
+			    top: 40%;
+			    margin-top: -4px;
+			    right: 10px;
+			}
+			.detail_content{
+				font-size: 12px;
+				padding:0 10px;
+				border-bottom: 5px solid #f5f5f5;
+			}
+			.detail_content .weui-flex{
+				border-bottom: 1px solid #f5f5f5;
+				padding:10px 0;
+			}
+			.detail_content .weui-flex:last-child{
+				border-bottom: 0px solid #f5f5f5;
+			}
+			.detail_content .weui-flex .weui-flex__item:last-child{
+				text-align: right;
+			}
+			.delist_gray{
+				color:#999;
+			}
+			.delist_blue{
+				color:#007AFF;
+			}
+			.fissile .weui-flex:nth-child(2) {
+			    font-size: 12px;
+			    color: #000;
+			    line-height: 25px;
+			}
+			.fissile .weui-flex:nth-child(3) {
+			    font-size: 12px;
+			    color: #999;
+			    line-height: 30px;
+			}
+			.detail_right{
+				padding:0 0 0 10px;
+			}
+		</style>
+
+ <body ontouchstart>
+
+    <div class="bd">
+        <div class="page__bd pageBody">
+		    <div class="weui-flex performance">
+		      <div class="weui-flex__item"><div class="placeholder" id="s1"><span class="active_b" >浏览业绩(65)</span></div></div>
+		    </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2020-01-05(3次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:)荒,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-05 16:16:07</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-05 15:39:15</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-05 09:33:21</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2020-01-04(30次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEI7cAfGAudyopGdhErjhsOUyfIsK6DsJzwdf1b1oRamRZXcHXTVJyX8SSVTM3iakVNbhtkOsBJyNLg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">A</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 22:08:09</span></div>
+						<div class="weui-flex__item">
+						<span class="delist_gray">无效原因:浏览无效,异地浏览</span>
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 22:01:28</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKo7Al8PjALoXraSPxly1x0U8CfqD9GfZA9OJn2JaxjyIicW0Gee3Jxh1fIbjoDGRugMgLY9yZA2WQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">有全</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:55:36</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqnDQFGNZYcYt29buDqEt9RDWZMduwiaKCN0WE07w5uw9n7b6QwHCzAYdS7HQsZoBXtIqtibU4uibQhg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">北漂</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:55:03</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqnDQFGNZYcYt29buDqEt9RDWZMduwiaKCN0WE07w5uw9n7b6QwHCzAYdS7HQsZoBXtIqtibU4uibQhg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">北漂</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:54:57</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI4akcIyIOXB0X2H2489PMkD3loK1OAsTNibnG1CF2MxxZmGKhvoGo8icWkO5zicybWicrdyZo5PNbZDw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">泥宥窝宥</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:54:43</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKo7Al8PjALoXraSPxly1x0U8CfqD9GfZA9OJn2JaxjyIicW0Gee3Jxh1fIbjoDGRugMgLY9yZA2WQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">有全</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:54:43</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI4akcIyIOXB0X2H2489PMkD3loK1OAsTNibnG1CF2MxxZmGKhvoGo8icWkO5zicybWicrdyZo5PNbZDw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">泥宥窝宥</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:侯,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:54:22</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:侯,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:51:21</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEI7cAfGAudyopGdhErjhsOUyfIsK6DsJzwdf1b1oRamRZXcHXTVJyX8SSVTM3iakVNbhtkOsBJyNLg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">A</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:侯,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:51:05</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+			            <span class="delist_gray">无效原因:未获取地理位置</span>
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLJOviap9YDVg0icxjZuLxEDB5pyQ9qjDTLDvooAib1ymu2de9Vl6Wg7XTKT30OoRAHiam8TDxHjUxMAQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">风景在路上</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:侯,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:51:02</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLJOviap9YDVg0icxjZuLxEDB5pyQ9qjDTLDvooAib1ymu2de9Vl6Wg7XTKT30OoRAHiam8TDxHjUxMAQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">风景在路上</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 21:44:16</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:空城无名[[%F0%9F%A4%94]] [[%F0%9F%A4%94]] [[%F0%9F%98%8A]] [[%F0%9F%98%92]] [[%F0%9F%A4%94]],归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 18:06:23</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:空城无名[[%F0%9F%A4%94]] [[%F0%9F%A4%94]] [[%F0%9F%98%8A]] [[%F0%9F%98%92]] [[%F0%9F%A4%94]],归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 17:51:04</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 17:05:12</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoa4yr3GPqGOGwNw8vicuiaMs32wSAdyLWyhyA059RelAaWa7dDZ5MGwQKs1fwd1e1yiaqG1K8iacbdibg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">陈师傅</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 12:06:15</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoa4yr3GPqGOGwNw8vicuiaMs32wSAdyLWyhyA059RelAaWa7dDZ5MGwQKs1fwd1e1yiaqG1K8iacbdibg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">陈师傅</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 12:05:43</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJxTvl0PgjOuiciaazjrRNWLRpEjQ8zUMOjpjPal4IjxQaic6YIEMWXdpuTB7Y8ibU13YeibJ6KfibGlXqQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">A0_果然</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 12:03:54</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK1Vc8SPMLKP1O6wwZWog8zWnrGI7C50DH0tmsZ7aYKGibxeTaVks26JcdOVWWEAFrnWwRwiallFib3g/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">九纹龙一</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 12:01:42</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK1Vc8SPMLKP1O6wwZWog8zWnrGI7C50DH0tmsZ7aYKGibxeTaVks26JcdOVWWEAFrnWwRwiallFib3g/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">九纹龙一</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 12:01:23</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/b818iaGOy0sRs8iceH9IadODSJDNQxv8hp0Uiby8jTqsYJtCgdRzicRH2VfGrQIYDpyFkuibjicuZxTKh9QDqTVdickiaA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">A~🍁米尔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 11:02:04</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/b818iaGOy0sRs8iceH9IadODSJDNQxv8hp0Uiby8jTqsYJtCgdRzicRH2VfGrQIYDpyFkuibjicuZxTKh9QDqTVdickiaA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">A~🍁米尔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 11:01:28</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI4akcIyIOXB0X2H2489PMkD3loK1OAsTNibnG1CF2MxxZmGKhvoGo8icWkO5zicybWicrdyZo5PNbZDw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">泥宥窝宥</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:36:21</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqAFT5icC2elz2jwhOUczNS6baPrVeGMgNo2vC0jQ82Z6OgjbjjClr75K5qlbdXgzRAGWtQAe11UFg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">侯</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:30:03</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqAFT5icC2elz2jwhOUczNS6baPrVeGMgNo2vC0jQ82Z6OgjbjjClr75K5qlbdXgzRAGWtQAe11UFg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">侯</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:29:56</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEL877uEByL4cYz2u8MnkSQuh8ibCiakOcUqS7Uysgeuibia4IMibG2KXtoVm8coUpVFrWvzH4CY4k7kuVg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">崔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:27:33</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEL877uEByL4cYz2u8MnkSQuh8ibCiakOcUqS7Uysgeuibia4IMibG2KXtoVm8coUpVFrWvzH4CY4k7kuVg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">崔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:27:15</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJml1cx6S5hiagUicgjz4iakPcADiakHCqMtw62q3x214enJofeSJNMIY6HErbFmBtw1drm74WCYV8XWw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">陈希</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:17:10</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJml1cx6S5hiagUicgjz4iakPcADiakHCqMtw62q3x214enJofeSJNMIY6HErbFmBtw1drm74WCYV8XWw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">陈希</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 10:16:58</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-04 09:56:21</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2020-01-03(1次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-03 07:58:56</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2020-01-02(6次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/NiaqzHooGDtYwICELHcnytT1OEyx6vbfhgNvQ6qae3DBTkNBbBRAicXWb6CQKjxL5R4P1PARicWFTDFa3LHImO99A/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">血</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:)荒,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-02 22:35:52</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-02 22:34:57</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM4q627GBqqZsRMrN1ngGNUMIg8lbWeKmVsgtyibsXicmBGhWAQ7Y06hlicAUSn1aeyYMOQBSicWlKHNqw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">sope</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-02 19:40:50</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-02 17:51:38</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/ys7KYU5BmhjGVF5DmOjGgiciaEAxMOkaHX6qFuAODn5TZv3XdsczX09ZR18K4iaGlA3Pevsy41VM3WUVKRUdUsSvg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">huahua😘</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-02 09:20:02</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-02 09:17:10</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2020-01-01(6次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-01 17:11:59</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLJOviap9YDVg0icxjZuLxEDB5pyQ9qjDTLDvooAib1ymu2de9Vl6Wg7XTKT30OoRAHiam8TDxHjUxMAQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">风景在路上</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-01 16:20:42</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLJOviap9YDVg0icxjZuLxEDB5pyQ9qjDTLDvooAib1ymu2de9Vl6Wg7XTKT30OoRAHiam8TDxHjUxMAQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">风景在路上</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-01 16:19:40</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqzPfLAYgBlUPE7ibN298QbyJLAqhtxaKRDdZASrPJOice48pfrkcH9sREWiaz6U6ZNgpexBsohzb6FA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">℡纟内。兰。日央。雪</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-01 12:59:42</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-01 12:42:53</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:血,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2020-01-01 08:21:06</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2019-12-31(15次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:血,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 20:57:16</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/NiaqzHooGDtYwICELHcnytT1OEyx6vbfhgNvQ6qae3DBTkNBbBRAicXWb6CQKjxL5R4P1PARicWFTDFa3LHImO99A/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">血</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:)荒,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 20:47:49</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/NiaqzHooGDtYwICELHcnytT1OEyx6vbfhgNvQ6qae3DBTkNBbBRAicXWb6CQKjxL5R4P1PARicWFTDFa3LHImO99A/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">血</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:)荒,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 20:47:34</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/7ZYNG5cSKctsKVR5MrLO3ub40GdtxdFlvjTPUkWkyiacKPsVpQqXb6G99sJ7L5KNZib4TrQSo2EFEoydgjdAp0Mg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">英〖 〗</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:)荒,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 20:45:09</span></div>
+						<div class="weui-flex__item">
+						<span class="delist_gray">无效原因:浏览无效,异地浏览</span>
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:)荒,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 20:40:57</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqML1IepKLibmZKg7v8a1bV7BaPB8Lv9H6Jeq5M87JuibaCTctPFtg4drmXAb7NJdyfW2mZqljaCnvw/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘丹华</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 20:03:18</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/7ZYNG5cSKctsKVR5MrLO3ub40GdtxdFlvjTPUkWkyiacKPsVpQqXb6G99sJ7L5KNZib4TrQSo2EFEoydgjdAp0Mg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">英〖 〗</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 19:50:40</span></div>
+						<div class="weui-flex__item">
+						<span class="delist_gray">无效原因:浏览无效,异地浏览</span>
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src=""><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">yys</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 13:40:25</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 10:40:22</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKGGygf4cWVAyAUyiatic9XhQE1NledGKjn6vzgusQ5clW7JOQMRCn5GtHibTFk3icXibFDQW6wvN476tQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">空城无名🤔 🤔 😊 😒 🤔</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 10:36:29</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 10:07:47</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUzL6C9UEUBZriat8LnjkmOYicic8Xfj9QCL3L1VLvbnJLibAOuvc6T3nqOuoBEFzcwhhCFUVvdbAdCg/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">)荒</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 10:07:07</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83er4NYb4dAZdgrlsHibEvcdInsE3jrXib4Zick2yYeiaQn2fbiaJOFQBJ7bZicuibEEkr6qZJwh1HyS8b2MIA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">Zy</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 09:58:37</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJJJdibLfaPjOnAyuobZ1hOSiasJM0Yys4HeL3LKKt1nEPIVNKHicVmySUWW8uKNcVbVQYQeuwo9gfbQ/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">郭美兰</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 09:44:20</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-31 09:41:33</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+	            <div class="delist">
+	              <div class="weui-flex detail_top">2019-12-30(4次)</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83er4NYb4dAZdgrlsHibEvcdInsE3jrXib4Zick2yYeiaQn2fbiaJOFQBJ7bZicuibEEkr6qZJwh1HyS8b2MIA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">Zy</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-30 17:17:11</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqzPfLAYgBlUPE7ibN298QbyJLAqhtxaKRDdZASrPJOice48pfrkcH9sREWiaz6U6ZNgpexBsohzb6FA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">℡纟内。兰。日央。雪</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-30 17:07:03</span></div>
+						<div class="weui-flex__item">
+
+			            <span class="delist_gray">无效原因:已浏览过 刘亚伟的链接</span>
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqzPfLAYgBlUPE7ibN298QbyJLAqhtxaKRDdZASrPJOice48pfrkcH9sREWiaz6U6ZNgpexBsohzb6FA/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">℡纟内。兰。日央。雪</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+						<span class="wsh">有效+1(来源:
+
+						链接
+						)</span>
+
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-30 17:06:28</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+
+
+
+
+			            </div>
+					</div>
+				</div>
+
+					<div class="fissile">
+					<div class="weui-flex">
+						<div class="weui-flex__item" style="flex:1.3"><img class="detail_left" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKxr7C1K4CsTYp9JKfUhKyXEH8bY2LwIv9tNOj9UJ5WTibWnm8reBia6Cra6UqlWsmePwThHLYicbV4w/132"><span style="height:25px;overflow:hidden;width: calc(100% - 40px);white-space:nowrap;text-overflow: ellipsis;" class="detail_right">刘亚伟</span></div>
+						<div class="weui-flex__item" style="flex:0.7">
+
+						<span style="color: red;">无效</span>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item">奖励人:刘亚伟,归属人:刘亚伟</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item"><span>2019-12-30 17:03:02</span></div>
+						<div class="weui-flex__item">
+
+
+
+
+
+
+
+
+			            <span class="delist_gray">无效原因:员工浏览</span>
+
+
+
+			            </div>
+					</div>
+				</div>
+
+	            </div>
+
+
+        </div>
+    </div>
+	<script>
+	  $(function() {
+	    FastClick.attach(document.body);
+	  });
+	</script>
+	<script src="../js/jquery-weui.js"></script>
+    <script>
+	    $(document).on("click",".performli>div>.time",function(){
+	      	$(this).siblings(".performtext").toggle();
+	    })
+	    $(".detail_top").click(function(){
+				$(this).siblings(".fissile").toggle();
+			})
+    </script>
+  </body>
+</html>
